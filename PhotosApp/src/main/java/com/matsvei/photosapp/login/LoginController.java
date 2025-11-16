@@ -1,14 +1,11 @@
 package com.matsvei.photosapp.login;
-
 import com.matsvei.photosapp.navigation.NavigationService;
-import com.matsvei.photosapp.home.HomeController;
 import com.matsvei.photosapp.home.User;
 import com.matsvei.photosapp.session.UserSession;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
 
 public class LoginController {
@@ -24,12 +21,12 @@ public class LoginController {
     @FXML
     public Button signupButton;
 
-    private void navigateToHome(User user, javafx.event.ActionEvent actionEvent) throws IOException {
+    private void navigateToHome(User user) throws IOException {
         UserSession.set(user);
         NavigationService.navigate("/com/matsvei/photosapp/home.fxml");
     }
 
-    public void onSignup(javafx.event.ActionEvent actionEvent) {
+    public void onSignup() {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -38,7 +35,7 @@ public class LoginController {
         DataStore.addUser(user);
 
         try {
-            navigateToHome(user, actionEvent);
+            navigateToHome(user);
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -46,7 +43,7 @@ public class LoginController {
         System.out.println(DataStore.getAllUsers());
     }
 
-    public void onLogin(javafx.event.ActionEvent actionEvent) {
+    public void onLogin() {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -60,7 +57,7 @@ public class LoginController {
             alert.showAndWait();
         } else {
             try {
-                navigateToHome(user, actionEvent);
+                navigateToHome(user);
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }

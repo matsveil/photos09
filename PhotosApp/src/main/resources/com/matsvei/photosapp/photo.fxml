@@ -14,24 +14,24 @@
       <ImageView fx:id="photoImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="dateLabel" text="Date" />
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
-                  <FlowPane fx:id="tagPane" prefHeight="200.0" prefWidth="200.0" />
+                  <FlowPane fx:id="tagPane" hgap="5.0" prefHeight="200.0" prefWidth="200.0" />
                   <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Button fx:id="deleteTagButton" mnemonicParsing="false" text="Delete Tag" />
-                        <Button fx:id="addTagButton" mnemonicParsing="false" text="Add Tag" />
+                        <Button fx:id="addTagButton" mnemonicParsing="false" onAction="#onAddTag" text="Add Tag" />
+                        <Button fx:id="deleteTagButton" mnemonicParsing="false" onAction="#onDeleteTag" text="Delete Tag" />
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                <children>
                   <Label fx:id="captionLabel" text="Caption" />
-                  <Button fx:id="eidtCaptionButton" mnemonicParsing="false" text="Edit Caption" />
+                  <Button fx:id="eidtCaptionButton" mnemonicParsing="false" onAction="#onEditCaption" text="Edit Caption" />
                </children>
             </VBox>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">

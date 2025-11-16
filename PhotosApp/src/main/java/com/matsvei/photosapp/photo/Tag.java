@@ -1,39 +1,32 @@
 package com.matsvei.photosapp.photo;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Tag implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
+    private final String name;
 
-    private String name;
-    private String value;
-
-    public Tag(String name, String value) {
-        if (name == null || name.isEmpty() || value == null || value.isEmpty()) {
+    public Tag(String name) {
+        if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Tag name and value cannot be empty");
         }
+
         this.name = name.trim().toLowerCase();
-        this.value = value.trim().toLowerCase();
     }
 
     public String getName() { return name; }
-    public String getValue() { return value; }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Tag)) return false;
-        Tag t = (Tag) o;
-        return name.equals(t.name) && value.equals(t.value);
+        if (!(o instanceof Tag t)) return false;
+        return name.equals(t.name);
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode() + value.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return name + "=" + value;
+        return name.hashCode();
     }
 }

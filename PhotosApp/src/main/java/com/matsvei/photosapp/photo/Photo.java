@@ -34,6 +34,13 @@ public class Photo extends Node implements Serializable {
         );
     }
 
+    public List<Tag> getTags() {
+        return tags;
+    }
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
     public LocalDateTime getDate() {
         return date;
     }
@@ -55,6 +62,18 @@ public class Photo extends Node implements Serializable {
 
     public void setCaption(String caption) {
         this.caption = caption;
+    }
+
+    public void addTag(Tag tag) {
+        if (!tags.contains(tag)) {
+            tags.add(tag);
+        }
+    }
+
+    public void removeTag(Tag tag) {
+        if (tags.contains(tag)) {
+            tags.remove(tag);
+        }
     }
 
     @Override

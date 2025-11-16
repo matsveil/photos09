@@ -1,7 +1,6 @@
 package com.matsvei.photosapp.home;
 import com.matsvei.photosapp.navigation.NavigationService;
 import com.matsvei.photosapp.album.Album;
-import com.matsvei.photosapp.album.AlbumController;
 import com.matsvei.photosapp.login.DataStore;
 import com.matsvei.photosapp.session.AlbumSession;
 import com.matsvei.photosapp.session.UserSession;
@@ -10,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -33,18 +31,6 @@ public class HomeController {
 
     @FXML
     private Label welcomeText;
-
-    @FXML
-    private Button createAlbumButton;
-
-    @FXML
-    private Button deleteAlbumButton;
-
-    @FXML
-    private Button renameAlbumButton;
-
-    @FXML
-    private Button openAlbumButton;
 
     @FXML
     public void initialize() {
@@ -121,8 +107,6 @@ public class HomeController {
             return;
         }
 
-        // TODO: Show a confirmation dialog here
-
         user.removeAlbum(selectedAlbum);
         refreshAlbumTiles();
         selectedAlbum = null;
@@ -181,7 +165,6 @@ public class HomeController {
         }
     }
 
-    // A helper method for showing errors
     private void showError(String message) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle("Error");
@@ -190,20 +173,13 @@ public class HomeController {
         alert.showAndWait();
     }
 
-    public void onLogout(ActionEvent actionEvent) {
-        DataStore.save();
+    public void onLogout() {
+        UserSession.set(null);
         user = null;
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/matsvei/photosapp/login.fxml"));
-            Parent root = loader.load();
-
-            Scene scene = logoutButton.getScene();
-            Stage stage = (Stage) scene.getWindow();
-
-            stage.setScene(new Scene(root)); 
-            stage.show();
-
+            NavigationService.navigate("/com/matsvei/photosapp/login.fxml");
+            DataStore.save();
         } catch (IOException e) { // <-- Catch IOException specifically
             e.printStackTrace();
         }
