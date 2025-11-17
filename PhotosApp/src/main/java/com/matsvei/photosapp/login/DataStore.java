@@ -49,13 +49,15 @@ public class DataStore {
             "stock5.jpg"
         };
         
-        // Get the directory where the data file is located
+        // Get the absolute path to the data directory
+        // This ensures stock photos work regardless of where the app runs from
         File dataFile = new File(DATA_FILE);
-        File dataDir = dataFile.getParentFile();
+        File dataDir = dataFile.getAbsoluteFile().getParentFile();
         
         for (String photoName : stockPhotoNames) {
             File photoFile = new File(dataDir, photoName);
             if (photoFile.exists()) {
+                // Use absolute path so photos can be found from anywhere
                 stockAlbum.addPhoto(new Photo(photoFile.getAbsolutePath()));
             }
         }
