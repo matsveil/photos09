@@ -33,22 +33,50 @@ public class LoginController {
     }
 
     public void onSignup() {
-        String username = usernameField.getText();
+        String username = usernameField.getText().trim();
         String password = passwordField.getText();
 
-        User user = new User(username, password);
+        // Validate username
+        if (username.isEmpty()) {
+            showError("Username cannot be empty.");
+            return;
+        }
 
+        // Check if username is "admin"
+        if ("admin".equalsIgnoreCase(username)) {
+            showError("Cannot create a user with username 'admin'.");
+            return;
+        }
+
+        // Validate password
+        if (password.isEmpty()) {
+            showError("Password cannot be empty.");
+            return;
+        }
+
+        // Check if user already exists
+        if (DataStore.getAllUsers().containsKey(username.toLowerCase())) {
+            showError("User '" + username + "' already exists. Please login instead.");
+            return;
+        }
+
+        // Create new user
+        User user = new User(username, password);
         DataStore.addUser(user);
 
         try {
             navigateToHome(user);
         } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("Failed to navigate: " + e.getMessage());
-            alert.showAndWait();
+            showError("Failed to navigate: " + e.getMessage());
         }
+    }
+
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     public void onLogin() {
