@@ -1,11 +1,15 @@
 # Photos Application
 
+> **⚠️ EDUCATIONAL PROJECT DISCLAIMER**  
+> This project was created solely for educational purposes as part of Rutgers University CS213 Software Methodology coursework (Fall 2025). This is a student assignment and is not affiliated with, endorsed by, or connected to any commercial entity or employer. All code was written independently by the authors listed below as part of their academic requirements.
+
 A photo management app built with JavaFX for organizing photos into albums with tagging and search.
 
 ## Team
 
 **Authors:** Matsvei Liapich (ml2071) & Ansh Jetli (aj1180)  
-**Grader:** Lokesh Kota (lk671)
+**Grader:** Lokesh Kota (lk671)  
+**Course:** CS213 Software Methodology, Rutgers University, Fall 2025
 
 ## Requirements
 
