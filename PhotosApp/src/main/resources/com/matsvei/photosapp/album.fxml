@@ -4,40 +4,61 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matsvei.photosapp.album.AlbumController">
-   <top>
-      <Label fx:id="albumName" text="Album Name" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="10.0" />
-         </BorderPane.margin>
-      </Label>
-   </top>
-   <center>
-      <ScrollPane fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
-         <content>
-            <TilePane fx:id="photoTilePane" hgap="10.0" prefHeight="306.0" prefWidth="578.0" vgap="10.0" />
-         </content>
-      </ScrollPane>
-   </center>
-   <padding>
-      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-   </padding>
-   <bottom>
-      <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="0.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="copyButton" mnemonicParsing="false" onAction="#onCopy" text="Copy" />
-            <Button fx:id="moveButton" mnemonicParsing="false" onAction="#onMove" text="Move" />
-            <Button fx:id="addPhotoButton" mnemonicParsing="false" onAction="#onAddPhoto" text="+" />
-            <Button fx:id="openPhotoButton" mnemonicParsing="false" onAction="#onOpenPhoto" text="Open" />
-            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBack" text="Back" />
-         </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </HBox>
-   </bottom>
-</BorderPane>
+<VBox prefHeight="800.0" prefWidth="1200.0" spacing="0.0" styleClass="root-container" stylesheets="@home.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matsvei.photosapp.album.AlbumController">
+    
+    <!-- Header Section -->
+    <VBox styleClass="header-section">
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+        </padding>
+        
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <Label fx:id="albumName" styleClass="welcome-text" text="Album Name" HBox.hgrow="ALWAYS" />
+            <Button fx:id="backButton" onAction="#onBack" styleClass="secondary-button" text="← Back" />
+        </HBox>
+    </VBox>
+    
+    <!-- Main Content -->
+    <VBox spacing="20.0" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="0.0" left="30.0" right="30.0" top="25.0" />
+        </padding>
+        
+        <!-- Photos Header -->
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label styleClass="section-title" text="Photos" />
+            <Region HBox.hgrow="ALWAYS" />
+        </HBox>
+        
+        <!-- Photos Grid -->
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="albums-scroll" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+            <TilePane fx:id="photoTilePane" hgap="20.0" prefColumns="5" styleClass="album-grid" vgap="20.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </TilePane>
+        </ScrollPane>
+    </VBox>
+    
+    <!-- Action Bar -->
+    <VBox styleClass="action-bar">
+        <padding>
+            <Insets bottom="25.0" left="30.0" right="30.0" top="25.0" />
+        </padding>
+        
+        <HBox alignment="CENTER" spacing="12.0">
+            <Button fx:id="addPhotoButton" onAction="#onAddPhoto" styleClass="primary-button" text="+ Add Photo" />
+            <Button fx:id="openPhotoButton" onAction="#onOpenPhoto" styleClass="action-button" text="Open" />
+            <Button fx:id="copyButton" onAction="#onCopy" styleClass="action-button" text="Copy" />
+            <Button fx:id="moveButton" onAction="#onMove" styleClass="action-button" text="Move" />
+        </HBox>
+    </VBox>
+</VBox>

@@ -3,51 +3,86 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matsvei.photosapp.photo.PhotoController">
-   <center>
-      <ImageView fx:id="photoImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-   </center>
-   <bottom>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="dateLabel" text="Date" />
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
-               <children>
-                  <FlowPane fx:id="tagPane" hgap="5.0" prefHeight="200.0" prefWidth="200.0" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                     <children>
-                        <Button fx:id="addTagButton" mnemonicParsing="false" onAction="#onAddTag" text="Add Tag" />
-                        <Button fx:id="deleteTagButton" mnemonicParsing="false" onAction="#onDeleteTag" text="Delete Tag" />
-                     </children>
-                  </HBox>
-               </children>
+<VBox prefHeight="800.0" prefWidth="1200.0" spacing="0.0" styleClass="root-container" stylesheets="@home.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matsvei.photosapp.photo.PhotoController">
+    
+    <!-- Header Section -->
+    <VBox styleClass="header-section">
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+        </padding>
+        
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <Label styleClass="welcome-text" text="Photo Details" HBox.hgrow="ALWAYS" />
+            <Button fx:id="backButton" onAction="#onBack" styleClass="secondary-button" text="← Back to Album" />
+        </HBox>
+    </VBox>
+    
+    <!-- Main Content -->
+    <ScrollPane fitToWidth="true" styleClass="albums-scroll" VBox.vgrow="ALWAYS">
+        <VBox spacing="30.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            
+            <!-- Photo Display -->
+            <VBox alignment="CENTER" spacing="20.0" styleClass="photo-container">
+                <padding>
+                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                </padding>
+                
+                <ImageView fx:id="photoImageView" fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" />
+                
+                <!-- Navigation Buttons -->
+                <HBox alignment="CENTER" spacing="12.0">
+                    <Button fx:id="previousButton" onAction="#onPrevious" styleClass="action-button" text="← Previous" />
+                    <Button fx:id="nextButton" onAction="#onNext" styleClass="action-button" text="Next →" />
+                </HBox>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
-               <children>
-                  <Label fx:id="captionLabel" text="Caption" />
-                  <Button fx:id="eidtCaptionButton" mnemonicParsing="false" onAction="#onEditCaption" text="Edit Caption" />
-               </children>
+            
+            <!-- Photo Information -->
+            <VBox spacing="25.0" styleClass="info-container">
+                <padding>
+                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                </padding>
+                
+                <!-- Date Section -->
+                <VBox spacing="8.0">
+                    <Label styleClass="info-label" text="Date Taken" />
+                    <Label fx:id="dateLabel" styleClass="info-value" text="Date" />
+                </VBox>
+                
+                <!-- Caption Section -->
+                <VBox spacing="8.0">
+                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                        <Label styleClass="info-label" text="Caption" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="editCaptionButton" onAction="#onEditCaption" styleClass="edit-button" text="Edit" />
+                    </HBox>
+                    <Label fx:id="captionLabel" styleClass="info-value" text="No caption" wrapText="true" />
+                </VBox>
+                
+                <!-- Tags Section -->
+                <VBox spacing="8.0">
+                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                        <Label styleClass="info-label" text="Tags" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="addTagButton" onAction="#onAddTag" styleClass="edit-button" text="+ Add" />
+                        <Button fx:id="deleteTagButton" onAction="#onDeleteTag" styleClass="delete-button-small" text="Delete" />
+                    </HBox>
+                    <FlowPane fx:id="tagPane" hgap="8.0" styleClass="tag-container" vgap="8.0">
+                        <padding>
+                            <Insets bottom="5.0" top="5.0" />
+                        </padding>
+                    </FlowPane>
+                </VBox>
             </VBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-               <children>
-                  <Button fx:id="previousButton" mnemonicParsing="false" onAction="#onPrevious" text="←" />
-                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#onNext" text="→" />
-                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBack" text="Back" />
-               </children>
-            </HBox>
-         </children>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </VBox>
-   </bottom>
-</BorderPane>
+        </VBox>
+    </ScrollPane>
+</VBox>

@@ -174,6 +174,25 @@
     -fx-scale-y: 0.98;
 }
 
+.delete-button-small {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.delete-button-small:hover {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+}
+
+.delete-button-small:pressed {
+    -fx-background-color: #C0392B;
+}
+
 .secondary-button {
     -fx-background-color: #ECF0F1;
     -fx-text-fill: #2C3E50;
@@ -192,8 +211,224 @@
     -fx-background-color: #BDC3C7;
 }
 
+.edit-button {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #3498DB;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.edit-button:hover {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+}
+
+.edit-button:pressed {
+    -fx-background-color: #2980B9;
+}
+
 /* Separator */
 .separator .line {
     -fx-border-color: #E8EBED;
     -fx-border-width: 1 0 0 0;
+}
+
+/* ===== LOGIN STYLES ===== */
+
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 20, 0, 0, 4);
+}
+
+.login-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #3498DB;
+}
+
+.login-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7F8C8D;
+}
+
+.field-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2C3E50;
+}
+
+.input-field {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 8;
+    -fx-border-color: #E8EBED;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 12 16 12 16;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E50;
+    -fx-pref-width: 350;
+}
+
+.input-field:focused {
+    -fx-border-color: #3498DB;
+    -fx-background-color: white;
+}
+
+.secondary-button-large {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.secondary-button-large:hover {
+    -fx-background-color: #D5DBDB;
+}
+
+.secondary-button-large:pressed {
+    -fx-background-color: #BDC3C7;
+}
+
+.divider-line {
+    -fx-border-color: #E8EBED;
+    -fx-border-width: 0 0 1 0;
+    -fx-min-height: 1;
+}
+
+.divider-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7F8C8D;
+}
+
+/* ===== ADMIN STYLES ===== */
+
+.users-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.users-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.user-list {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #E8EBED;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.user-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 14px;
+    -fx-padding: 12 16 12 16;
+}
+
+.user-list .list-cell:selected {
+    -fx-background-color: #E3F2FD;
+    -fx-text-fill: #1976D2;
+}
+
+.user-list .list-cell:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+/* ===== PHOTO STYLES ===== */
+
+.photo-container {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 12, 0, 0, 4);
+}
+
+.info-container {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 12, 0, 0, 4);
+}
+
+.info-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #7F8C8D;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 0.5px;
+}
+
+.info-value {
+    -fx-font-size: 15px;
+    -fx-text-fill: #2C3E50;
+}
+
+.tag-container {
+    -fx-background-color: transparent;
+}
+
+.tag-container .label {
+    -fx-background-color: #E3F2FD;
+    -fx-text-fill: #1976D2;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+/* ===== SEARCH STYLES ===== */
+
+.search-controls {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 6, 0, 0, 2);
+}
+
+.search-section {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 12;
+    -fx-border-color: #E8EBED;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.search-radio {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2C3E50;
+}
+
+.date-picker {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #E8EBED;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 14px;
+}
+
+.date-picker:focused {
+    -fx-border-color: #3498DB;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #E8EBED;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3498DB;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #2C3E50;
 }
