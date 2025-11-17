@@ -40,7 +40,8 @@ public class PhotoController {
         Image image = new Image(new File(photo.getFilePath()).toURI().toString());
         photoImageView.setImage(image);
 
-        captionLabel.setText(photo.getCaption());
+        String caption = photo.getCaption();
+        captionLabel.setText(caption.isEmpty() ? "No caption" : caption);
 
         formatDate();
 
@@ -102,7 +103,7 @@ public class PhotoController {
         dialog.getEditor().setText(photo.getCaption());
         dialog.showAndWait().ifPresent(caption -> {
             photo.setCaption(caption);
-            captionLabel.setText(caption);
+            captionLabel.setText(caption.isEmpty() ? "No caption" : caption);
             DataStore.save();
         });
     }

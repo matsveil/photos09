@@ -26,6 +26,7 @@ public class Photo implements Serializable {
     public Photo(String filePath) {
         this.filePath = filePath;
         this.date = getModifiedDate();
+        this.caption = "";
         this.tags = new ArrayList<>();
     }
 
@@ -60,7 +61,7 @@ public class Photo implements Serializable {
     }
 
     public String getCaption() {
-        return caption;
+        return caption == null ? "" : caption;
     }
 
     public void setCaption(String caption) {
