@@ -1,0 +1,9 @@
+module:com.matsvei.photosapp
+com.matsvei.photosapp
+com.matsvei.photosapp.admin
+com.matsvei.photosapp.album
+com.matsvei.photosapp.home
+com.matsvei.photosapp.login
+com.matsvei.photosapp.navigation
+com.matsvei.photosapp.photo
+com.matsvei.photosapp.search

@@ -64,7 +64,6 @@ public class AlbumController {
             album.addPhoto(new Photo(file.getAbsolutePath()));
             displayPhotos();
             DataStore.save();
-            System.out.println("Added: " + file.getAbsolutePath());
         }
     }
 
@@ -111,11 +110,16 @@ public class AlbumController {
 
     @FXML
     private void onOpenPhoto(ActionEvent event) {
+        if (selectedPhoto == null) {
+            showAlert("No Photo Selected", "Please select a photo to open.");
+            return;
+        }
+        
         try {
             PhotoSession.set(selectedPhoto);
             NavigationService.navigate("/com/matsvei/photosapp/photo.fxml");
         } catch (IOException e) {
-            e.printStackTrace();
+            showAlert("Error", "Failed to open photo: " + e.getMessage());
         }
     }
 
@@ -124,8 +128,21 @@ public class AlbumController {
         try {
             NavigationService.navigate("/com/matsvei/photosapp/home.fxml");
         } catch (IOException e) {
-            e.printStackTrace();
+            showAlert("Error", "Failed to navigate back: " + e.getMessage());
         }
+    }
+
+    @FXML
+    public void onRemovePhoto(ActionEvent event) {
+        if (selectedPhoto == null) {
+            showAlert("No photo selected", "Please select a photo to remove.");
+            return;
+        }
+        
+        album.removePhoto(selectedPhoto);
+        displayPhotos();
+        selectedPhoto = null;
+        DataStore.save();
     }
 
     @FXML

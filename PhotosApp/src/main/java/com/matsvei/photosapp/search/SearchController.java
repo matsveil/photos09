@@ -267,7 +267,7 @@ public class SearchController {
             PhotoSession.set(selectedPhoto);
             NavigationService.navigate("/com/matsvei/photosapp/photo.fxml");
         } catch (IOException e) {
-            e.printStackTrace();
+            showError("Failed to open photo: " + e.getMessage());
         }
     }
 
@@ -359,7 +359,7 @@ public class SearchController {
         try {
             NavigationService.navigate("/com/matsvei/photosapp/home.fxml");
         } catch (IOException e) {
-            e.printStackTrace();
+            showError("Failed to navigate back: " + e.getMessage());
         }
     }
 

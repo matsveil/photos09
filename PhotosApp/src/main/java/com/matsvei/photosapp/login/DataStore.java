@@ -1,6 +1,8 @@
 package com.matsvei.photosapp.login;
 
+import com.matsvei.photosapp.album.Album;
 import com.matsvei.photosapp.home.User;
+import com.matsvei.photosapp.photo.Photo;
 
 import java.io.*;
 import java.util.HashMap;
@@ -22,9 +24,45 @@ public class DataStore {
             users = (Map<String, User>) in.readObject();
         } catch (FileNotFoundException e) {
             users = new HashMap<>();
+            initializeStockUser();
         } catch (Exception e) {
-            e.printStackTrace();
+            // If data is corrupted, start fresh
+            users = new HashMap<>();
+            initializeStockUser();
         }
+    }
+    
+    /**
+     * Initializes the stock user with stock photos.
+     * This is called on first run when no user data exists.
+     */
+    private static void initializeStockUser() {
+        User stockUser = new User("stock", "stock");
+        Album stockAlbum = new Album("stock");
+        
+        // Add stock photos (5-10 photos from the data directory)
+        String[] stockPhotoNames = {
+            "stock1.jpg",
+            "stock2.jpg",
+            "stock3.jpg",
+            "stock4.jpg",
+            "stock5.jpg"
+        };
+        
+        // Get the directory where the data file is located
+        File dataFile = new File(DATA_FILE);
+        File dataDir = dataFile.getParentFile();
+        
+        for (String photoName : stockPhotoNames) {
+            File photoFile = new File(dataDir, photoName);
+            if (photoFile.exists()) {
+                stockAlbum.addPhoto(new Photo(photoFile.getAbsolutePath()));
+            }
+        }
+        
+        stockUser.addAlbum(stockAlbum);
+        users.put("stock", stockUser);
+        save();
     }
 
     public static void save() {
@@ -37,7 +75,7 @@ public class DataStore {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             out.writeObject(users);
         } catch (Exception e) {
-            e.printStackTrace();
+            // Silently fail - data will be saved on next attempt
         }
     }
 

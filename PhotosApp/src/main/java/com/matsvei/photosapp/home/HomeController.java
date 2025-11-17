@@ -42,7 +42,6 @@ public class HomeController {
         user = UserSession.get();
 
         if (user == null) {
-            System.out.println("NO USER IN SESSION — this means login didn’t set it.");
             return;
         }
 
@@ -76,8 +75,6 @@ public class HomeController {
                 albumTilePane.getChildren().forEach(node -> node.getStyleClass().remove("album-tile-selected"));
 
                 tile.getStyleClass().add("album-tile-selected");
-
-                System.out.println("Selected album: " + album.getName());
             });
 
             albumTilePane.getChildren().add(tile);
@@ -198,8 +195,8 @@ public class HomeController {
         try {
             NavigationService.navigate("/com/matsvei/photosapp/login.fxml");
             DataStore.save();
-        } catch (IOException e) { // <-- Catch IOException specifically
-            e.printStackTrace();
+        } catch (IOException e) {
+            showError("Error during logout: " + e.getMessage());
         }
     }
 
@@ -207,8 +204,8 @@ public class HomeController {
         try {
             NavigationService.navigate("/com/matsvei/photosapp/search.fxml");
             DataStore.save();
-        } catch (IOException e) { // <-- Catch IOException specifically
-            e.printStackTrace();
+        } catch (IOException e) {
+            showError("Error navigating to search: " + e.getMessage());
         }
     }
 }

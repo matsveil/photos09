@@ -40,7 +40,7 @@ public class AdminController {
         userList.clear();
         DataStore.getAllUsers().values().forEach(user -> {
             if (!"admin".equalsIgnoreCase(user.getUsername())) {
-                userList.add(user.getUsername());
+                userList.add(user.getUsername() + " (password: " + user.getPassword() + ")");
             }
         });
     }
@@ -106,12 +106,15 @@ public class AdminController {
      */
     @FXML
     private void onDeleteUser() {
-        String selectedUsername = userListView.getSelectionModel().getSelectedItem();
+        String selectedItem = userListView.getSelectionModel().getSelectedItem();
 
-        if (selectedUsername == null) {
+        if (selectedItem == null) {
             showError("Please select a user to delete.");
             return;
         }
+
+        // Extract username from "username (password: ...)" format
+        String selectedUsername = selectedItem.split(" \\(password:")[0];
 
         // Confirm deletion
         Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -143,7 +146,7 @@ public class AdminController {
             NavigationService.navigate("/com/matsvei/photosapp/login.fxml");
             DataStore.save();
         } catch (IOException e) {
-            e.printStackTrace();
+            showError("Error during logout: " + e.getMessage());
         }
     }
 

@@ -43,10 +43,12 @@ public class LoginController {
         try {
             navigateToHome(user);
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Failed to navigate: " + e.getMessage());
+            alert.showAndWait();
         }
-
-        System.out.println(DataStore.getAllUsers());
     }
 
     public void onLogin() {
@@ -61,7 +63,11 @@ public class LoginController {
                     UserSession.set(new User("admin", "admin"));
                     NavigationService.navigate("/com/matsvei/photosapp/admin.fxml");
                 } catch (Exception e) {
-                    System.out.println("Error: " + e.getMessage());
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Failed to navigate: " + e.getMessage());
+                    alert.showAndWait();
                 }
                 return;
             } else {
@@ -87,7 +93,11 @@ public class LoginController {
             try {
                 navigateToHome(user);
             } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Failed to navigate: " + e.getMessage());
+                alert.showAndWait();
             }
         }
     }

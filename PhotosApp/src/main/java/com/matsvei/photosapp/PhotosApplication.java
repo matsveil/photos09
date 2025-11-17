@@ -35,9 +35,13 @@ public class PhotosApplication extends Application {
         NavigationService.initialize(scene);
         stage.setTitle("Photos");
         stage.setScene(scene);
+        
+        // Save data when window is closed
+        stage.setOnCloseRequest(event -> {
+            DataStore.save();
+        });
+        
         stage.show();
-
-        System.out.println(DataStore.getAllUsers());
     }
 
     public static void main(String[] args) {

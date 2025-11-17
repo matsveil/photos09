@@ -1,8 +1,5 @@
 package com.matsvei.photosapp.photo;
 
-import com.matsvei.photosapp.album.Album;
-import javafx.scene.Node;
-
 import java.io.File;
 import java.io.Serial;
 import java.time.Instant;
@@ -18,7 +15,7 @@ import java.util.List;
  * 
  * @author matsvei
  */
-public class Photo extends Node implements Serializable {
+public class Photo implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     private String filePath;

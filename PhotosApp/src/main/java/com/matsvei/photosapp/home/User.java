@@ -64,20 +64,12 @@ public class User implements Serializable {
     public void addAlbum(Album album) {
         if (!albums.contains(album)) {
             albums.add(album);
-        } else  {
-            System.out.println("Album already exists: " + album.getName());
         }
-
-        System.out.println("Successfully added album: " + album.getName());
     }
 
     public void removeAlbum(Album album) {
         if (albums.contains(album)) {
             albums.remove(album);
-        } else   {
-            System.out.println("Album does not exist: " + album.getName());
         }
-
-        System.out.println("Successfully removed album: " + album.getName());
     }
 }

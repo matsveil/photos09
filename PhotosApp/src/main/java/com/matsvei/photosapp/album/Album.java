@@ -46,16 +46,11 @@ public class Album implements Serializable {
     public void addPhoto(Photo photo) {
         if (!photos.contains(photo)) {
             photos.add(photo);
-        } else {
-            System.out.println("Photo already exists in album: " + photo.getFilePath());
         }
-
-        System.out.println("Photo added successfully: " + photo.getFilePath());
     }
 
     public void removePhoto(Photo photo) {
         photos.remove(photo);
-        System.out.println("Photo removed successfully");
     }
 
     public int getPhotoCount() {
