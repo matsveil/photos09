@@ -16,4 +16,8 @@ module com.matsvei.photosapp {
     opens com.matsvei.photosapp.photo to javafx.fxml;
     exports com.matsvei.photosapp.navigation;
     opens com.matsvei.photosapp.navigation to javafx.fxml;
+    exports com.matsvei.photosapp.admin;
+    opens com.matsvei.photosapp.admin to javafx.fxml;
+    exports com.matsvei.photosapp.search;
+    opens com.matsvei.photosapp.search to javafx.fxml;
 }

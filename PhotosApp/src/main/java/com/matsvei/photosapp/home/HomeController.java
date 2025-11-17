@@ -6,10 +6,6 @@ import com.matsvei.photosapp.session.AlbumSession;
 import com.matsvei.photosapp.session.UserSession;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
@@ -19,6 +15,12 @@ import javafx.scene.layout.TilePane;
 import java.io.IOException;  
 import java.util.Optional;  
 
+/**
+ * Controller for the home view.
+ * Displays user's albums and allows creating, deleting, renaming, and opening albums.
+ * 
+ * @author matsvei
+ */
 public class HomeController {
     public Button logoutButton;
 
@@ -31,6 +33,9 @@ public class HomeController {
 
     @FXML
     private Label welcomeText;
+    
+    @FXML
+    private Label albumCountLabel;
 
     @FXML
     public void initialize() {
@@ -47,10 +52,21 @@ public class HomeController {
 
     private void refreshAlbumTiles() {
         albumTilePane.getChildren().clear();
+        
+        // Update album count
+        int albumCount = user.albums.size();
+        if (albumCountLabel != null) {
+            albumCountLabel.setText(albumCount + (albumCount == 1 ? " album" : " albums"));
+        }
 
         for (Album album : user.albums) {
-            Button tile = new Button(album.getName());
-            tile.setPrefSize(100, 100);
+            // Create album tile with name, photo count, and date range
+            String tileText = album.getName() + "\n" + 
+                             album.getPhotoCount() + " photo(s)\n" +
+                             album.getDateRange();
+            
+            Button tile = new Button(tileText);
+            tile.setPrefSize(180, 140);
             tile.setWrapText(true);
             tile.getStyleClass().add("album-tile");
 
@@ -110,6 +126,7 @@ public class HomeController {
         user.removeAlbum(selectedAlbum);
         refreshAlbumTiles();
         selectedAlbum = null;
+        DataStore.save();
     }
 
     @FXML
@@ -147,6 +164,7 @@ public class HomeController {
                 int index = user.albums.indexOf(selectedAlbum);
                 user.albums.set(index, selectedAlbum);
                 refreshAlbumTiles();
+                DataStore.save();
             }
         });
     }
@@ -179,6 +197,15 @@ public class HomeController {
 
         try {
             NavigationService.navigate("/com/matsvei/photosapp/login.fxml");
+            DataStore.save();
+        } catch (IOException e) { // <-- Catch IOException specifically
+            e.printStackTrace();
+        }
+    }
+
+    public void onSearch() {
+        try {
+            NavigationService.navigate("/com/matsvei/photosapp/search.fxml");
             DataStore.save();
         } catch (IOException e) { // <-- Catch IOException specifically
             e.printStackTrace();

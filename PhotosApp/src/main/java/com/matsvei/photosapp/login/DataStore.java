@@ -6,6 +6,12 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Data store for persisting user data using serialization.
+ * Handles loading and saving user data to disk.
+ * 
+ * @author matsvei
+ */
 public class DataStore {
     private static final String DATA_FILE = "data/users.dat";
 
@@ -52,6 +58,11 @@ public class DataStore {
 
     public static Map<String, User> getAllUsers() {
         return users;
+    }
+
+    public static void deleteUser(String username) {
+        users.remove(username.toLowerCase());
+        save();
     }
 }
 

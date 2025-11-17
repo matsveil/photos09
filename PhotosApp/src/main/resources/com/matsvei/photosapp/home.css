@@ -1,19 +1,199 @@
+/* Root Container */
+.root-container {
+    -fx-background-color: #F8F9FA;
+}
+
+/* Header Section */
+.header-section {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+}
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #1A1A1A;
+}
+
+/* Section Title */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2C3E50;
+}
+
+.album-count {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7F8C8D;
+}
+
+/* Scroll Pane */
+.albums-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.albums-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.albums-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8px;
+}
+
+.albums-scroll .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.albums-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #BDC3C7;
+    -fx-background-radius: 4px;
+}
+
+.albums-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #95A5A6;
+}
+
+/* Album Grid */
+.album-grid {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Album Tiles */
 .album-tile {
-    -fx-background-color: #C0C0C0;
-    -fx-text-fill: white;
-    -fx-background-radius: 12;
-    -fx-font-size: 14px;
+    -fx-background-color: white;
+    -fx-text-fill: #2C3E50;
+    -fx-background-radius: 16;
+    -fx-font-size: 13px;
     -fx-alignment: center;
-    -fx-padding: 4;
+    -fx-padding: 20 16 20 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 12, 0, 0, 4);
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
 }
 
 .album-tile:hover {
-    -fx-background-color: #B2B2B2;
+    -fx-background-color: #FAFBFC;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 16, 0, 0, 6);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
 }
 
 .album-tile-selected {
-    -fx-background-color: #007FFF;
-    -fx-text-fill: white;
-    -fx-background-radius: 12;
+    -fx-background-color: white;
+    -fx-text-fill: #2C3E50;
+    -fx-background-radius: 16;
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 16, 0, 0, 4);
 }
 
+.album-tile-selected:hover {
+    -fx-background-color: #F0F8FF;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 20, 0, 0, 6);
+}
+
+/* Action Bar */
+.action-bar {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, -2);
+}
+
+/* Buttons */
+.primary-button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 8, 0, 0, 2);
+}
+
+.primary-button:hover {
+    -fx-background-color: #2980B9;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 12, 0, 0, 4);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #21618C;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.action-button {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-background-color: #D5DBDB;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.action-button:pressed {
+    -fx-background-color: #BDC3C7;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.delete-button {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.delete-button:pressed {
+    -fx-background-color: #C0392B;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.secondary-button {
+    -fx-background-color: #ECF0F1;
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-padding: 10 18 10 18;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #D5DBDB;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #BDC3C7;
+}
+
+/* Separator */
+.separator .line {
+    -fx-border-color: #E8EBED;
+    -fx-border-width: 1 0 0 0;
+}

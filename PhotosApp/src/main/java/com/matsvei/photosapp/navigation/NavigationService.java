@@ -1,4 +1,10 @@
 package com.matsvei.photosapp.navigation;
+
+/**
+ * Service for handling navigation between different views in the application.
+ * 
+ * @author matsvei
+ */
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

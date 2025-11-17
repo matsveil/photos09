@@ -12,6 +12,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.Optional;
 
+/**
+ * Represents an album in the Photos application.
+ * Each album has a name and contains a collection of photos.
+ * 
+ * @author matsvei
+ */
 public class Album implements Serializable {
     @Serial
     private final static long serialVersionUID = 1L;

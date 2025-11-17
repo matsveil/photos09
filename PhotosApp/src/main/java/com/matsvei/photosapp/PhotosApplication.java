@@ -10,7 +10,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * JavaFX Application class for the Photos application.
+ * Handles initialization and launching of the application.
+ * 
+ * @author matsvei
+ */
 public class PhotosApplication extends Application {
+    /**
+     * Starts the JavaFX application.
+     * Loads user data and displays the login screen.
+     * 
+     * @param stage the primary stage for this application
+     * @throws IOException if the FXML file cannot be loaded
+     */
     @Override
     public void start(Stage stage) throws IOException {
         DataStore.load();

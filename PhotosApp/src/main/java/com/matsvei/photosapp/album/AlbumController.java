@@ -23,6 +23,12 @@ import java.util.List;
 import java.util.Optional;
 import javafx.fxml.FXML;
 
+/**
+ * Controller for the album view.
+ * Displays photos in an album and allows adding, removing, copying, and moving photos.
+ * 
+ * @author matsvei
+ */
 public class AlbumController {
     public Button backButton;
     public Button openPhotoButton;

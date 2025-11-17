@@ -1,11 +1,21 @@
 package com.matsvei.photosapp.home;
 
 import com.matsvei.photosapp.album.Album;
+import com.matsvei.photosapp.photo.Photo;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+/**
+ * Represents a user in the Photos application.
+ * Each user has a username, password, and a collection of albums.
+ * 
+ * @author matsvei
+ */
 public class User implements Serializable {
     @Serial
     private final static long serialVersionUID = 1L;
@@ -34,6 +44,16 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Photo> getAllPhotos() {
+        Set<Photo> photos = new HashSet<>();
+
+        for (Album album : albums) {
+            photos.addAll(album.getPhotos());
+        }
+
+        return photos;
     }
 
 

@@ -16,6 +16,13 @@ import java.io.File;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Controller for the photo detail view.
+ * Displays a photo with its caption, date, and tags.
+ * Allows editing caption, adding/deleting tags, and navigating through photos.
+ * 
+ * @author matsvei
+ */
 public class PhotoController {
     private Photo photo;
 
@@ -38,7 +45,8 @@ public class PhotoController {
         formatDate();
 
         photo.getTags().forEach(tag -> {
-            Label tagLabel = new Label(tag.getName());
+            Label tagLabel = new Label(tag.toString());
+            tagLabel.setStyle("-fx-background-color: #E0E0E0; -fx-padding: 5; -fx-background-radius: 5;");
             tagPane.getChildren().add(tagLabel);
         });
     }
@@ -100,28 +108,47 @@ public class PhotoController {
     }
 
     public void onDeleteTag(ActionEvent actionEvent) {
-        ChoiceDialog<String> dialog = new ChoiceDialog<>("", photo.getTags().stream().map(Tag::getName).toArray(String[]::new));
+        if (photo.getTags().isEmpty()) {
+            return;
+        }
+        
+        ChoiceDialog<Tag> dialog = new ChoiceDialog<>(photo.getTags().get(0), photo.getTags());
         dialog.setTitle("Delete Tag");
         dialog.setHeaderText(null);
         dialog.setContentText("Select tag to delete:");
-        dialog.showAndWait().ifPresent(tagName -> {
-            photo.removeTag(new Tag(tagName));
+        dialog.showAndWait().ifPresent(tag -> {
+            photo.removeTag(tag);
             DataStore.save();
-
             initialize();
         });
     }
 
     public void onAddTag() {
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Add Tag");
-        dialog.setHeaderText(null);
-        dialog.setContentText("Enter new tag:");
-        dialog.showAndWait().ifPresent(tagName -> {
-            photo.addTag(new Tag(tagName));
-            DataStore.save();
-
-            initialize();
+        TextInputDialog typeDialog = new TextInputDialog();
+        typeDialog.setTitle("Add Tag");
+        typeDialog.setHeaderText(null);
+        typeDialog.setContentText("Enter tag type (e.g., person, location):");
+        
+        typeDialog.showAndWait().ifPresent(tagType -> {
+            if (tagType.trim().isEmpty()) {
+                return;
+            }
+            
+            TextInputDialog valueDialog = new TextInputDialog();
+            valueDialog.setTitle("Add Tag");
+            valueDialog.setHeaderText(null);
+            valueDialog.setContentText("Enter tag value:");
+            
+            valueDialog.showAndWait().ifPresent(tagValue -> {
+                if (tagValue.trim().isEmpty()) {
+                    return;
+                }
+                
+                Tag newTag = new Tag(tagType, tagValue);
+                photo.addTag(newTag);
+                DataStore.save();
+                initialize();
+            });
         });
     }
 }

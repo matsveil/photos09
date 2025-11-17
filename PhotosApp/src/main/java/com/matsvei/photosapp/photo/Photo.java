@@ -12,6 +12,12 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a photo in the Photos application.
+ * Each photo has a file path, date, caption, and a collection of tags.
+ * 
+ * @author matsvei
+ */
 public class Photo extends Node implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;

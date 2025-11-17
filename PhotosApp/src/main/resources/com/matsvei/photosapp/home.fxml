@@ -3,31 +3,66 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="root" alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matsvei.photosapp.home.HomeController">
-    <padding>
-        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-    </padding>
-
-    <HBox alignment="CENTER_LEFT" spacing="10.0">
-        <Label fx:id="welcomeText" HBox.hgrow="ALWAYS" />
-        <Button fx:id="logoutButton" onAction="#onLogout" text="Log out" />
-    </HBox>
-
-    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="My Albums">
-        <VBox.margin>
-            <Insets top="10.0" />
-        </VBox.margin>
-    </Label>
-   <TilePane fx:id="albumTilePane" hgap="6.0" prefHeight="200.0" prefWidth="200.0" vgap="6.0" />
-
-    <HBox alignment="CENTER" spacing="10.0">
-        <Button fx:id="createAlbumButton" onAction="#onCreateAlbum" text="Add" />
-        <Button fx:id="deleteAlbumButton" onAction="#onDeleteAlbum" text="Delete" />
-        <Button fx:id="renameAlbumButton" onAction="#onRenameAlbum" text="Rename" />
-        <Button fx:id="openAlbumButton" onAction="#onOpenAlbum" text="Open" />
-    </HBox>
+<VBox fx:id="root" prefHeight="800.0" prefWidth="1200.0" spacing="0.0" styleClass="root-container" stylesheets="@home.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.matsvei.photosapp.home.HomeController">
+    
+    <!-- Header Section -->
+    <VBox styleClass="header-section">
+        <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+        </padding>
+        
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+            <Label fx:id="welcomeText" styleClass="welcome-text" text="Welcome!" HBox.hgrow="ALWAYS" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" styleClass="secondary-button" text="🔍 Search" />
+            <Button fx:id="logoutButton" onAction="#onLogout" styleClass="secondary-button" text="Log out" />
+        </HBox>
     </VBox>
+    
+    <!-- Main Content -->
+    <VBox spacing="20.0" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="0.0" left="30.0" right="30.0" top="25.0" />
+        </padding>
+        
+        <!-- Albums Header -->
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label styleClass="section-title" text="My Albums" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="albumCountLabel" styleClass="album-count" text="0 albums" />
+        </HBox>
+        
+        <!-- Albums Grid -->
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="albums-scroll" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+            <TilePane fx:id="albumTilePane" hgap="20.0" prefColumns="4" styleClass="album-grid" vgap="20.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+            </TilePane>
+        </ScrollPane>
+    </VBox>
+    
+    <!-- Action Bar -->
+    <VBox styleClass="action-bar">
+        <padding>
+            <Insets bottom="25.0" left="30.0" right="30.0" top="25.0" />
+        </padding>
+        
+        <HBox alignment="CENTER" spacing="12.0">
+            <Button fx:id="createAlbumButton" onAction="#onCreateAlbum" styleClass="primary-button" text="+ New Album" />
+            <Button fx:id="openAlbumButton" onAction="#onOpenAlbum" styleClass="action-button" text="Open" />
+            <Button fx:id="renameAlbumButton" onAction="#onRenameAlbum" styleClass="action-button" text="Rename" />
+            <Button fx:id="deleteAlbumButton" onAction="#onDeleteAlbum" styleClass="delete-button" text="Delete" />
+        </HBox>
+    </VBox>
+</VBox>
