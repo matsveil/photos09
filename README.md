@@ -1,93 +1,134 @@
 # Photos Application
 
-A JavaFX-based photo management application that allows users to organize photos into albums, add tags, search photos, and more.
+A photo management app built with JavaFX for organizing photos into albums with tagging and search.
 
-## Disclaimer
-This project was created as part of class coursework for educational purposes.
+## Team
 
-## Authors
-- Matsvei Liapich (ml2071)
-- Ansh Jetli (aj1180)
+**Authors:** Matsvei Liapich (ml2071) & Ansh Jetli (aj1180)  
+**Grader:** Lokesh Kota (lk671)
 
-## Grader
-- Lokesh Kota (lk671)
+## Requirements
+
+- JDK 21
+- JavaFX SDK 21
+- Maven (included)
+
+## How to Run
+
+```bash
+cd PhotosApp
+./mvnw javafx:run
+```
+
+Or run `com.matsvei.photosapp.Photos` from your IDE (set working directory to `PhotosApp/`)
+
+## Login Info
+
+**Admin**
+- Username: `admin`
+- Password: `admin` (or leave blank)
+
+**Stock User** (comes with 5 sample photos)
+- Username: `stock`
+- Password: `stock`
+
+Create other users through the admin panel.
 
 ## Features
 
-### Admin Features
-- Login with username "admin" (password: "admin" or leave blank)
-- List all users
+### Admin Panel
+- View all users with their passwords
 - Create new users
 - Delete existing users
 
-### User Features
-- **Album Management**: Create, delete, rename, and open albums
-- **Photo Management**: 
-  - Add photos from your computer
-  - Remove photos from albums
-  - Caption and recaption photos
-  - View photos with date, caption, and tags
-  - Copy photos between albums
-  - Move photos between albums
-  - Manual slideshow (navigate forward/backward)
-- **Tagging System**:
-  - Add tags with type-value pairs (e.g., person:Alice, location:NYC)
-  - Delete tags
-  - Multiple tags per photo
-- **Search Functionality**:
-  - Search by date range
-  - Search by single tag
-  - Search with AND/OR operators on two tags
-  - Create albums from search results
-- **Data Persistence**: All data is automatically saved and loaded using Java serialization
+### Photo Management
+- Create, rename, and delete albums
+- Add photos from anywhere on your computer
+- Remove photos from albums
+- Add captions to photos
+- View photos with date, caption, and tags
+- Copy or move photos between albums
+- Navigate through photos with next/previous buttons
 
-## Running the Application
+### Tags
+- Add custom tags to photos (like "person:Alice" or "location:NYC")
+- Delete tags from photos
+- Tags stay with the photo across all albums
 
-### Prerequisites
-- JDK 21
-- JavaFX SDK 21
+### Search
+- Search by date range
+- Search by a single tag
+- Search with AND (both tags must match)
+- Search with OR (either tag matches)
+- Save search results as a new album
 
-### Launching
-Run the main class:
-```
-com.matsvei.photosapp.Photos
-```
-
-### Default Login
-- **Admin**: username="admin", password="admin" (or leave password blank)
-- **Regular Users**: Create via admin panel or sign up
+### Data Saving
+All your data saves automatically when you:
+- Logout
+- Close the window
+- Make any changes
 
 ## Project Structure
+
 ```
 PhotosApp/
+├── data/                     # Stock photos and saved data
+│   ├── stock1.jpg through stock5.jpg
+│   └── users.dat            # Your saved data (created when you run the app)
+├── docs/                    # API documentation
+│   └── index.html
 ├── src/main/
-│   ├── java/com/matsvei/photosapp/
-│   │   ├── Photos.java (Main class)
-│   │   ├── PhotosApplication.java
-│   │   ├── admin/ (Admin controller)
-│   │   ├── album/ (Album management)
-│   │   ├── home/ (Home screen and User model)
-│   │   ├── login/ (Authentication and data persistence)
-│   │   ├── navigation/ (Navigation service)
-│   │   ├── photo/ (Photo model, tags, and photo controller)
-│   │   ├── search/ (Search functionality)
-│   │   └── session/ (Session management)
-│   └── resources/com/matsvei/photosapp/
-│       ├── *.fxml (UI layouts)
-│       └── home.css (Styling)
-├── data/ (User data storage)
-└── docs/ (Javadoc documentation)
+│   ├── java/                # All the Java code
+│   │   └── com/matsvei/photosapp/
+│   │       ├── Photos.java           # Main entry point
+│   │       ├── admin/                # Admin panel
+│   │       ├── album/                # Album management
+│   │       ├── home/                 # Home screen and User model
+│   │       ├── login/                # Login and data storage
+│   │       ├── navigation/           # Screen navigation
+│   │       ├── photo/                # Photo and Tag models
+│   │       ├── search/               # Search features
+│   │       └── session/              # Session tracking
+│   └── resources/           # UI layouts (FXML files)
+└── pom.xml                  # Maven config
 ```
 
-## Technology Stack
-- **Java 21**: Core programming language
-- **JavaFX 21**: User interface framework
-- **FXML**: UI layout design
-- **Java Serialization**: Data persistence
+## Technical Details
 
-## Notes
-- Photos are referenced by file path, not copied into the application
-- All user data is saved automatically on logout or when changes are made
-- The application supports BMP, GIF, JPEG, and PNG image formats
-- Tags are stored as type-value pairs (e.g., "person":"Alice")
-- Search results can be saved as new albums
+**Data Storage**
+- Photos are referenced by file path (not copied into the app)
+- Everything saves using Java serialization
+- Same photo in multiple albums shares captions and tags
+
+**Photo Dates**
+- Uses the file's last modified date
+- Displayed in format: "MMM d, yyyy HH:mm"
+
+**Supported Image Formats**
+- JPEG/JPG, PNG, GIF, BMP
+
+**Design**
+- All UIs built with FXML
+- Model-View-Controller architecture
+- Proper package separation
+
+## Building
+
+```bash
+cd PhotosApp
+
+# Compile
+./mvnw clean compile
+
+# Run
+./mvnw javafx:run
+
+# Generate docs
+./mvnw javadoc:javadoc
+```
+
+## Documentation
+
+Full API documentation is in `PhotosApp/docs/index.html`
+
+All classes have Javadoc comments with author tags.
