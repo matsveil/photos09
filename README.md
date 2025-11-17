@@ -16,11 +16,11 @@ A photo management app built with JavaFX for organizing photos into albums with 
 ## How to Run
 
 ```bash
-cd PhotosApp
+cd Photos09
 ./mvnw javafx:run
 ```
 
-Or run `com.matsvei.photosapp.Photos` from your IDE (set working directory to `PhotosApp/`)
+Or run `com.matsvei.photosapp.Photos` from your IDE (set working directory to `Photos09/`)
 
 ## Login Info
 
@@ -71,7 +71,7 @@ All your data saves automatically when you:
 ## Project Structure
 
 ```
-PhotosApp/
+Photos09/
 ├── data/                     # Stock photos and saved data
 │   ├── stock1.jpg through stock5.jpg
 │   └── users.dat            # Your saved data (created when you run the app)
@@ -115,7 +115,7 @@ PhotosApp/
 ## Building
 
 ```bash
-cd PhotosApp
+cd Photos09
 
 # Compile
 ./mvnw clean compile
@@ -129,6 +129,6 @@ cd PhotosApp
 
 ## Documentation
 
-Full API documentation is in `PhotosApp/docs/index.html`
+Full API documentation is in `Photos09/docs/index.html`
 
 All classes have Javadoc comments with author tags.

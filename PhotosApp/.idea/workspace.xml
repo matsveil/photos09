@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e28d324-9be9-4a5e-95d1-190f7f7ae896" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/Photos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/PhotosApplication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/admin/AdminController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/admin/class-use/AdminController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/admin/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/admin/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/admin/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/Album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/AlbumController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/class-use/Album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/class-use/AlbumController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/album/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/class-use/Photos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/class-use/PhotosApplication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/HomeController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/class-use/HomeController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/class-use/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/home/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/DataStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/LoginController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/class-use/DataStore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/class-use/LoginController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/login/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/navigation/NavigationService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/navigation/class-use/NavigationService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/navigation/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/navigation/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/navigation/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/Photo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/PhotoController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/Tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/class-use/Photo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/class-use/PhotoController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/class-use/Tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/photo/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/search/SearchController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/search/class-use/SearchController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/search/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/search/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/com/matsvei/photosapp/search/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.matsvei.photosapp/module-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/dejavufonts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/copy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/glass.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/resource-files/x.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script-files/jquery-3.7.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script-files/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script-files/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script-files/search-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script-files/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/Photos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/PhotosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/admin/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/album/Album.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/album/AlbumController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/home/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/home/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/login/DataStore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/login/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/navigation/NavigationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/photo/Photo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/photo/PhotoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/photo/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/search/SearchController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/session/AlbumSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/session/PhotoSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/session/UserSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/admin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/album.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/photo.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp/search.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-21.0.8/Contents/Home/lib/src.zip!/java.base/java/io/ObjectOutputStream.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="34fbtqkln3cenCKJDeSb9X32gdX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhotosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.matsvei.photosapp.PhotosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/matsvei/Developer/photos/PhotosApp/src/main/java/com/matsvei/photosapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp/session" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matsvei/photosapp" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/matsvei/photosapp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.matsvei.photosapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PhotosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.matsvei.photosapp.PhotosApplication" />
+      <module name="PhotosApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matsvei.photosapp.photo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PhotosApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e28d324-9be9-4a5e-95d1-190f7f7ae896" name="Changes" comment="" />
+      <created>1761607792153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761607792153</updated>
+      <workItem from="1761607793835" duration="166000" />
+      <workItem from="1761608049970" duration="12265000" />
+      <workItem from="1761688214495" duration="3000000" />
+      <workItem from="1761863854433" duration="10935000" />
+      <workItem from="1761929249207" duration="100000" />
+      <workItem from="1761929356912" duration="98000" />
+      <workItem from="1761929459643" duration="6454000" />
+      <workItem from="1762134917671" duration="86000" />
+      <workItem from="1762135006423" duration="3218000" />
+      <workItem from="1762835426246" duration="1432000" />
+      <workItem from="1762903161796" duration="26023000" />
+      <workItem from="1763182413806" duration="15669000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
