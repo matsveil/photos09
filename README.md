@@ -8,7 +8,6 @@ A photo management app built with JavaFX for organizing photos into albums with 
 ## Team
 
 **Authors:** Matsvei Liapich (ml2071) & Ansh Jetli (aj1180)  
-**Grader:** Lokesh Kota (lk671)  
 **Course:** CS213 Software Methodology, Rutgers University, Fall 2025
 
 ## Requirements
